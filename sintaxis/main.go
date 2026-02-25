@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	// En go las variables se escriben con CAMELCASE
+	// En go las variables se escriben con CAMELCASE, myVariable
 	/*
 		Los comentarios de varias lineas
 		se representan con * y /
