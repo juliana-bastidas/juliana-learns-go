@@ -20,5 +20,18 @@ func main() {
 	fmt.Println(sub1)
 	sub2 := ops.Substract(10, "3")
 	fmt.Println(sub2)
-	fmt.Printf("Bienvenidas a %s version %d día %.1f", name, version, weekday)
+	fmt.Printf("Bienvenidas a %s version %d día %.1f\n", name, version, weekday)
+
+	//even or add
+	numberParImpar := ops.ParImpar(9)
+	fmt.Println(numberParImpar)
+
+	//Ley de Ohm
+	println("Ley Ohm 1")
+	ohm1 := ops.OhmEasy(0, 2, 3)
+	println(ohm1)
+	ohm2 := ops.OhmEasy(6, 2, 0)
+	println(ohm2)
+	ohm3 := ops.OhmEasy(6, 0, 3)
+	println(ohm3)
 }

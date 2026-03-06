@@ -50,3 +50,23 @@ func Substract(a int, b interface{}) int {
 	}
 	return total
 }
+
+func ParImpar(a int) string {
+	if a%2 == 0 {
+		return "Es Par"
+	} else {
+		return "Es impar"
+	}
+}
+
+func OhmEasy(v, i, r int) int {
+	if v == 0 {
+		return i * r
+	} else if i == 0 {
+		return v / r
+	} else if r == 0 {
+		return v / i
+	} else {
+		return 0
+	}
+}
