@@ -28,10 +28,14 @@ func main() {
 
 	//Ley de Ohm
 	println("Ley Ohm 1")
-	ohm1 := ops.OhmEasy(0, 2, 3)
-	println(ohm1)
-	ohm2 := ops.OhmEasy(6, 2, 0)
-	println(ohm2)
-	ohm3 := ops.OhmEasy(6, 0, 3)
-	println(ohm3)
+	vol, _ := ops.OhmEasy(0, 2, 3)
+	fmt.Printf("%.2f\n", vol)
+	i, _ := ops.OhmEasy(6, 2, 0)
+	fmt.Printf("%.2f\n", i)
+	r, _ := ops.OhmEasy(6, 0, 3)
+	fmt.Printf("%.2f\n", r)
+
+	println("Ahora con Interface")
+	v, _ := ops.Resolver(ops.Voltaje{R: 10, I: 2})
+	fmt.Printf("%.2f", v)
 }
