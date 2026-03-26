@@ -122,3 +122,22 @@ func (r Resistencia) Calcular() (float64, error) {
 func Resolver(o ohmCalculator) (float64, error) {
 	return o.Calcular()
 }
+
+func Foobar(length int) string {
+	str := ""
+	for i := 1; i <= length; i++ {
+		if i%3 == 0 && i%5 == 0 {
+			str += "FooBar"
+		} else if i%3 == 0 {
+			str += "Foo"
+		} else if i%5 == 0 {
+			str += "Bar"
+		} else {
+			str += fmt.Sprintf("%d", i)
+		}
+		if length != i {
+			str += "->"
+		}
+	}
+	return str
+}

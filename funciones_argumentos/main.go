@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"funciones_argumentos/greetings"
 	"funciones_argumentos/ops"
+	"os"
 )
 
 func main() {
@@ -38,4 +39,26 @@ func main() {
 	println("Ahora con Interface")
 	v, _ := ops.Resolver(ops.Voltaje{R: 10, I: 2})
 	fmt.Printf("%.2f", v)
+	println()
+	println("FOOBAR")
+	exampleFoor := ops.Foobar(15)
+	println(exampleFoor)
+
+	PrintManArgs(1, 2, "a", "b", "e", "E")
+
+	args := os.Args
+	for _, arg := range args {
+		fmt.Println(arg)
+	}
+	// el primer argumento siempre va a ser el script que se este ejecutando
+	// go run . a b c
+	// se separan los argumentos con espacios
+}
+
+//Funcion variadica
+
+// args ...string -> significa que puedes tener muchos argumentos y todos los enviara a un array
+func PrintManArgs(a int, b int, args ...string) {
+	fmt.Println(a, b, args)
+	fmt.Println(args[0])
 }
