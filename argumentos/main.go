@@ -31,6 +31,8 @@ func main() {
 			fmt.Printf("El resultado de la suma es: %d \n", sum(a, b))
 		}
 	}
+	PrintManyArgs(10, "User logs in", "user id: qwerty12345")
+
 }
 
 // para ejecutarlo sin go.mod
@@ -41,4 +43,8 @@ func helloWorld() {
 
 func sum(a, b int) int {
 	return (a + b)
+}
+
+func PrintManyArgs(level int, message string, details ...interface{}) {
+	fmt.Printf("%d:::%s<%v>\n", level, message, details)
 }
